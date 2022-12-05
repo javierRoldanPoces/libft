@@ -1,46 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 18:01:06 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/04 13:52:05 by jroldan-         ###   ########.fr       */
+/*   Created: 2022/12/04 13:58:33 by jroldan-          #+#    #+#             */
+/*   Updated: 2022/12/04 18:10:53 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	char	*srccpy;
-	char	*destcpy;
+	size_t	j;
+	size_t	lendst;
 
-	srccpy = (char *) src;
-	destcpy = (char *) dest;
 	i = 0;
-	if (!src && !dest)
-		return (NULL);
-	if (dest > src)
-	{	
-		while (n--)
-		{
-			destcpy[n] = srccpy[n];
-		}	
-	}
-	else
+	j = 0;
+	lendst = ft_strlen(dst);
+	if (lendst < (dstsize - 1) && dstsize > 0)
 	{
-		while (i < n)
+		while (dst[i] != '\0')
 		{
-			destcpy[i] = srccpy[i];
 			i++;
 		}
+		while (src[j] != '\0' && j < dstsize - lendst - 1)
+		{
+			dst[i] = src[j];
+			i++;
+			j++;
+		}
+		dst[i] = '\0';
 	}
-	return (dest);
+	if (lendst > dstsize)
+		lendst = dstsize;
+	return (lendst + ft_strlen(src));
 }
-/**
- * @brief 
- * 
- */
