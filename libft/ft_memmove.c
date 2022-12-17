@@ -6,12 +6,20 @@
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 18:01:06 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/04 13:52:05 by jroldan-         ###   ########.fr       */
+/*   Updated: 2022/12/17 02:16:40 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @def  La función memmove() copia n bytes del área de memoria src al área 
+ * 		de memoria dest.  Las áreas de memoria pueden solaparse.
+ * 
+ * @param dest 
+ * @param src 
+ * @param n 
+ * @return void* La función memmove() devuelve un puntero a dest.
+ */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -40,7 +48,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/**
- * @brief 
- * 
- */

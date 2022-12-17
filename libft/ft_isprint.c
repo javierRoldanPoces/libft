@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 16:07:09 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/17 02:03:08 by jroldan-         ###   ########.fr       */
+/*   Created: 2022/12/17 01:09:48 by jroldan-          #+#    #+#             */
+/*   Updated: 2022/12/17 01:15:06 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/**
- * @cite similar a memset pero rellena con 0
- * 
- * @param s 
- * @param n 
- */
-void	ft_bzero(void *s, size_t n)
+
+int	ft_isprint(int c)
 {
-	ft_memset(s, 0, n);
+	return (c >= 32 && c <= 126);
 }

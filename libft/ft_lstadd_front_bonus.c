@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 16:07:09 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/17 02:03:08 by jroldan-         ###   ########.fr       */
+/*   Created: 2022/12/13 18:31:41 by jroldan-          #+#    #+#             */
+/*   Updated: 2022/12/13 19:25:09 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /**
- * @cite similar a memset pero rellena con 0
+ * @cite Esta funcion anade el nodo new al principuio de la listya lst
  * 
- * @param s 
- * @param n 
+ * @param lst Indica la dirección de un puntero al primer nodo de la lista
+ * @param new un puntero al nodo que anadir al principio de la lista 
  */
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	ft_memset(s, 0, n);
+	if (lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

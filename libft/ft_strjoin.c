@@ -6,13 +6,15 @@
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:35:58 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/07 19:11:27 by jroldan-         ###   ########.fr       */
+/*   Updated: 2022/12/17 02:19:26 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /**
- * @brief 
+ * @def Reserva con malloc y devuelve una nueva string, formada por la 
+ * concatenación de ’s1’ y ’s2’.Devuelve el string nuevo null si falla la 
+ * reserva de memoria 
  * 
  * @param s1 -> primera string 
  * @param s2 ->  string destino donde se concatena s1
@@ -46,7 +48,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[j] = '\0';
 	return (s3);
 }
-//Reserva con malloc y devuelve una nueva
-//string, formada por la concatenación de ’s1’ y ’s2’.
-//Devuelve el string nuevo null si falla la reserva de memoria
-//Parametros s1->Primera string s2->destino donde seconcatena s2

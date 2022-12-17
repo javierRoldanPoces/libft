@@ -6,7 +6,7 @@
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 18:12:32 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/15 11:08:11 by jroldan-         ###   ########.fr       */
+/*   Updated: 2022/12/16 17:49:56 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*aux;
 
 	aux = lst;
-	if (lst == NULL)
+	if (!lst)
 		return (NULL);
 	while (aux && aux->next != NULL)
 	{	

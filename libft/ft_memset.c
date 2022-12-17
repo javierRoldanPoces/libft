@@ -6,12 +6,20 @@
 /*   By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 11:58:48 by jroldan-          #+#    #+#             */
-/*   Updated: 2022/12/05 19:13:52 by jroldan-         ###   ########.fr       */
+/*   Updated: 2022/12/17 02:00:43 by jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
-
+/**
+ * @date The memset() function fills the first n bytes of the memory area
+       pointed to by s with the constant byte c.
+ * 
+ * @param s puntero al string con el que va a trabajar nuestra función
+ * @param c caracter con el que vamos a llenar nustra string
+ * @param n numerop de bytes que vamos a sustituir
+ * @return void* 
+ */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t		i;
@@ -26,8 +34,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s = scpy);
 }
-
-/*linea 18 ->	creo un puntero a char para castear el string recibido como void
- al tipo que necesito 
- linea 20 ->	casteo el puntero (void)	
- */
