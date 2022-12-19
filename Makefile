@@ -6,7 +6,7 @@
 #    By: jroldan- <jroldan-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 13:11:51 by jroldan-          #+#    #+#              #
-#    Updated: 2022/12/17 01:21:56 by jroldan-         ###   ########.fr        #
+#    Updated: 2022/12/19 18:31:11 by jroldan-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,15 +29,15 @@ $(NAME) : $(OBJ)
 	$(CC) $(CFLAG) -c $(SRC)
 	ar rc $(NAME) $(OBJ) $(SRC)
 
-all : $(NAME) $(OBJBONUS)
+all : $(NAME)
 
-re: make fclean all
+re: fclean all
 
 clean:
-	rm  -f *.o $(NAME)
+	rm  -f $(OBJ) $(OBJBONUS)
 
-fclean:
-	rm  -f *.a *.o $(NAME)
+fclean: clean
+	rm  -f $(NAME)
 bonus:
 	$(CC) $(CFLAG) -c $(SRCBONUS)
 	ar rc $(NAME) $(OBJBONUS) $(SRC)
